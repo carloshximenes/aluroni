@@ -1,0 +1,8 @@
+@import "styles/_variables.scss";
+
+.filters {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
