@@ -7,21 +7,21 @@ const Filter: FC<{
     isSelected: boolean;
     onClick: (idSelected: number) => void;
 }> = (props) => {
-    const getClasses = () => {
-        let listClasses: string[] = [];
-        listClasses.push(classes.filter);
-        props.isSelected && listClasses.push(classes["filter--active"]);
-        return listClasses.join(" ");
-    };
+	const getClasses = () => {
+		const listClasses: string[] = [];
+		listClasses.push(classes.filter);
+		props.isSelected && listClasses.push(classes["filter--active"]);
+		return listClasses.join(" ");
+	};
 
-    return (
-        <button
-            className={getClasses()}
-            onClick={props.onClick.bind(null, props.id)}
-        >
-            {props.label}
-        </button>
-    );
+	return (
+		<button
+			className={getClasses()}
+			onClick={props.onClick.bind(null, props.id)}
+		>
+			{props.label}
+		</button>
+	);
 };
 
 export default Filter;

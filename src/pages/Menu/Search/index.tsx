@@ -9,22 +9,22 @@ interface Props {
 }
 
 const Search: FC<Props> = (props) => {
-    const textChangeHandler = (event: React.FormEvent<HTMLInputElement>) => {
-        props.onChange(event.currentTarget.value);
-    };
+	const textChangeHandler = (event: React.FormEvent<HTMLInputElement>) => {
+		props.onChange(event.currentTarget.value);
+	};
 
-    return (
-        <div className={classes.search}>
-            <input
-                type="text"
-                value={props.value}
-                placeholder={props.placeholder}
-                onChange={textChangeHandler}
-            />
+	return (
+		<div className={classes.search}>
+			<input
+				type="text"
+				value={props.value}
+				placeholder={props.placeholder}
+				onChange={textChangeHandler}
+			/>
             ;
-            <CgSearch size={20} color="#4D4C5E" />
-        </div>
-    );
+			<CgSearch size={20} color="#4D4C5E" />
+		</div>
+	);
 };
 
 export default Search;
