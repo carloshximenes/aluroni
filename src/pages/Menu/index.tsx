@@ -37,7 +37,6 @@ const Menu = () => {
     const [sortOption, setSortOption] = useState("");
     const [filterOption, setFilterOption] = useState(0);
     const [items, dispatchItems] = useReducer(itemsReducer, DUMMY_ITEMS);
-    // const [items, setItems] = useState(DUMMY_ITEMS);
 
     useEffect(() => {
         const searchValidation = (title: string) => {
